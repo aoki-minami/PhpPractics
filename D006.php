@@ -1,16 +1,18 @@
 <?php
     // 自分の得意な言語で
     // Let's チャレンジ！！
-    $input_lines = fgets(STDIN);
-    $m = explode(" ", $input_lines);
+    $input_lines = trim(fgets(STDIN));
+    $n = explode(" ", $input_lines);
 
-    $n = $m[0];
-    echo $n . " ";
-    for($i=1 ; $i < 10 ; $i++){
-        echo $n += $m[1];
+    if(strcmp($n[1], 'km') === 0){
+        echo $n[0] * 1000 * 100 * 10;
+    }
 
-        if($i < 9){
-            echo " ";
-        }
+    if(strcmp($n[1], 'm') === 0){
+        echo $n[0] * 100 * 10;
+    }
+
+    if(strcmp($n[1], 'cm') === 0){
+        echo $n[0] * 10;
     }
 ?>
