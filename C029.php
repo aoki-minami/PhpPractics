@@ -54,7 +54,7 @@
         //　初めの最小値を見つける
         if($min === $ave_value){
 
-            // 降水確率の平均の最初の日と最後の日を表示
+            // 表示
             echo $start[$key] . " " . $end[$key] . "\n";
             break;
         }
